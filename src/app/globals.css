@@ -30,8 +30,34 @@ html, body {
   color: var(--color-foreground);
   margin: 0;
   padding: 0;
+  min-width: 0;
+}
+
+body {
+  min-width: 0;
 }
 
 * {
   box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  html, body {
+    font-size: 15px;
+    padding: 0;
+  }
 }
