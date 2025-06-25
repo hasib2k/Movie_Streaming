@@ -2,15 +2,17 @@
 
 import { HomeIcon, HeartIcon, ClockIcon, FireIcon, Cog6ToothIcon, LifebuoyIcon, PlayCircleIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
-  { name: 'Home', icon: HomeIcon },
-  { name: 'Favorites', icon: HeartIcon },
-  { name: 'Coming soon', icon: ClockIcon },
-  { name: 'Trending', icon: FireIcon },
-  { name: 'Settings', icon: Cog6ToothIcon },
-  { name: 'Support', icon: LifebuoyIcon },
+  { name: 'Home', icon: HomeIcon, path: '/' },
+  { name: 'Favorites', icon: HeartIcon, path: '/favorites' },
+  { name: 'Coming soon', icon: ClockIcon, path: '/coming-soon' },
+  { name: 'Trending', icon: FireIcon, path: '/trending' },
+  { name: 'Settings', icon: Cog6ToothIcon, path: '/settings' },
+  { name: 'Support', icon: LifebuoyIcon, path: '/support' },
 ];
 
 const continueWatching = [
@@ -40,6 +42,8 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ isOpen = false, onClose = () => {} }: SidebarProps) {
+  const pathname = usePathname();
+  
   // Close sidebar when clicking escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -51,6 +55,14 @@ export default function Sidebar({ isOpen = false, onClose = () => {} }: SidebarP
     window.addEventListener('keydown', handleEscape);
     return () => window.removeEventListener('keydown', handleEscape);
   }, [onClose]);
+  
+  // Close sidebar when navigating to a new page on mobile
+  const handleNavigation = () => {
+    // Only close on mobile screens
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      onClose();
+    }
+  };
 
   return (
     <>
@@ -90,14 +102,16 @@ export default function Sidebar({ isOpen = false, onClose = () => {} }: SidebarP
       {/* Navigation */}
       <nav className="flex flex-col gap-1 sm:gap-2">
         {navLinks.map(link => (
-          <a 
+          <Link 
             key={link.name} 
-            href="#" 
-            className="flex items-center gap-2 sm:gap-3 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg hover:bg-[#232a31] transition"
+            href={link.path} 
+            onClick={handleNavigation}
+            className={`flex items-center gap-2 sm:gap-3 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg hover:bg-[#232a31] transition
+                      ${pathname === link.path ? 'bg-[#232a31]' : ''}`}
           >
-            <link.icon className="h-5 w-5 sm:h-6 sm:w-6 text-[#959ca3]" />
-            <span className="text-sm sm:text-base font-medium">{link.name}</span>
-          </a>
+            <link.icon className={`h-5 w-5 sm:h-6 sm:w-6 ${pathname === link.path ? 'text-yellow-400' : 'text-[#959ca3]'}`} />
+            <span className={`text-sm sm:text-base font-medium ${pathname === link.path ? 'text-yellow-400' : ''}`}>{link.name}</span>
+          </Link>
         ))}
       </nav>
       {/* Continue Watching */}
@@ -105,9 +119,11 @@ export default function Sidebar({ isOpen = false, onClose = () => {} }: SidebarP
         <h3 className="text-xs sm:text-sm font-semibold text-[#959ca3] mb-2 sm:mb-3">Continue Watching</h3>
         <div className="flex flex-col gap-4 sm:gap-6">
           {continueWatching.map((item) => (
-            <div 
+            <Link 
               key={item.title} 
-              className="relative flex items-center gap-2 sm:gap-3 bg-[#181e23] rounded-lg p-3 sm:p-4 md:p-5"
+              href={`/watch/${encodeURIComponent(item.title.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-'))}`}
+              onClick={handleNavigation}
+              className="relative flex items-center gap-2 sm:gap-3 bg-[#181e23] rounded-lg p-3 sm:p-4 md:p-5 hover:bg-[#232a31] transition-colors"
             >
               <div className="relative w-14 sm:w-16 h-9 sm:h-10 rounded overflow-hidden">
                 <Image src={item.image} alt={item.title} fill className="object-cover rounded" />
@@ -123,7 +139,7 @@ export default function Sidebar({ isOpen = false, onClose = () => {} }: SidebarP
                   <div className="h-1 bg-yellow-400 rounded" style={{ width: `${item.progress}%` }} />
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>      </div>
     </aside>
