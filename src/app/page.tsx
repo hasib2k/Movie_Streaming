@@ -1,24 +1,19 @@
 import Image from "next/image";
-import Header from "../components/Header";
 import FeaturedMovie from "../components/FeaturedMovie";
 import CategoryFilters from "../components/CategoryFilters";
 import MovieRow from "../components/MovieRow";
 import categories from "../data/categories";
 import FAQ from "../components/FAQ";
-import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <div className="flex-1 px-4 sm:px-8 pb-8">
-        <FeaturedMovie />
-        <CategoryFilters />
-        {categories.slice(0, 4).map((cat) => (
-          <MovieRow key={cat} category={cat} />
-        ))}
-        <FAQ />
-      </div>
+    <div className="px-3 xs:px-4 sm:px-6 md:px-8 pb-6 xs:pb-8">
+      <FeaturedMovie />
+      <CategoryFilters />
+      {categories.slice(0, 6).map((cat) => (
+        <MovieRow key={cat} category={cat} />
+      ))}
+      <FAQ />
     </div>
   );
 }

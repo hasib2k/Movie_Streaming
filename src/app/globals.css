@@ -31,6 +31,7 @@ html, body {
   margin: 0;
   padding: 0;
   min-width: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -55,9 +56,32 @@ img, video {
   display: none;
 }
 
+/* Add smooth scrolling for better mobile experience */
+.scroll-smooth {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Better horizontal scrolling experience */
+.scrolling-touch {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive breakpoints for more granular control */
 @media (max-width: 640px) {
   html, body {
     font-size: 15px;
     padding: 0;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html, body {
+    font-size: 14px;
   }
 }

@@ -1,13 +1,14 @@
 const categories = [
+  "Action",
   "Trending",
   "Adventure",
-  "Action",
   "Comedy",
   "Crime",
   "Drama",
   "Fantasy",
   "Horror",
   "Sci-Fi",
+  "Family",
   "Family",
 ];
 

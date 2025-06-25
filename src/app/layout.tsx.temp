@@ -2,13 +2,18 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "@fontsource/poppins/400.css";
 import "@fontsource/poppins/700.css";
-import ClientLayoutWrapper from "./client-layout";
+import React from "react";
 
 // Define metadata for the page
 export const metadata: Metadata = {
   title: "Servia - Movie Streaming App",
   description: "A beautiful movie streaming UI built with Next.js",
 };
+
+// Simple wrapper component
+function ClientLayoutWrapper({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
+}
 
 export default function RootLayout({
   children,
