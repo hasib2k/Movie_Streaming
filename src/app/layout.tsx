@@ -6,7 +6,7 @@ import ClientLayoutWrapper from "./client-layout";
 
 // Define metadata for the page
 export const metadata: Metadata = {
-  title: "Servia - Movie Streaming App",
+  title: "Pixloris - Movie Streaming App",
   description: "A beautiful movie streaming UI built with Next.js",
 };
 

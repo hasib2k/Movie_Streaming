@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Servia - Movie Streaming App",
+  title: "Pixloris - Movie Streaming App",
   description: "A beautiful movie streaming UI built with Next.js",
 };
 

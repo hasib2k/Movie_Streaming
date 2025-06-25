@@ -1,5 +1,6 @@
 "use client"
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -45,58 +46,58 @@ export default function Footer() {
           <div>
             <div className="font-semibold text-[#f9f8ff] mb-2 md:mb-3">Company</div>
             <div className="space-y-1 xs:space-y-1.5">
-              <div>About Us</div>
-              <div>Careers</div>
-              <div>Press</div>
-              <div>Investors</div>
-              <div>Blog</div>
+              <Link href="/about-us" className="block hover:text-[#f9f8ff] transition-colors">About Us</Link>
+              <Link href="/careers" className="block hover:text-[#f9f8ff] transition-colors">Careers</Link>
+              <Link href="/press" className="block hover:text-[#f9f8ff] transition-colors">Press</Link>
+              <Link href="/investors" className="block hover:text-[#f9f8ff] transition-colors">Investors</Link>
+              <Link href="/blog" className="block hover:text-[#f9f8ff] transition-colors">Blog</Link>
             </div>
           </div>
           
           <div>
             <div className="font-semibold text-[#f9f8ff] mb-2 md:mb-3">Downloads</div>
             <div className="space-y-1 xs:space-y-1.5">
-              <div>Windows</div>
-              <div>macOS</div>
-              <div>Android</div>
-              <div>iOS</div>
-              <div>Apple TV</div>
-              <div>Roku</div>
-              <div>Fire TV</div>
+              <Link href="/downloads/windows" className="block hover:text-[#f9f8ff] transition-colors">Windows</Link>
+              <Link href="/downloads/macos" className="block hover:text-[#f9f8ff] transition-colors">macOS</Link>
+              <Link href="/downloads/android" className="block hover:text-[#f9f8ff] transition-colors">Android</Link>
+              <Link href="/downloads/ios" className="block hover:text-[#f9f8ff] transition-colors">iOS</Link>
+              <Link href="/downloads/apple-tv" className="block hover:text-[#f9f8ff] transition-colors">Apple TV</Link>
+              <Link href="/downloads/roku" className="block hover:text-[#f9f8ff] transition-colors">Roku</Link>
+              <Link href="/downloads/fire-tv" className="block hover:text-[#f9f8ff] transition-colors">Fire TV</Link>
             </div>
           </div>
           
           <div>
             <div className="font-semibold text-[#f9f8ff] mb-2 md:mb-3">Support</div>
             <div className="space-y-1 xs:space-y-1.5">
-              <div>Help Center</div>
-              <div>Contact Us</div>
-              <div>Community</div>
-              <div>Device Support</div>
-              <div>Accessibility</div>
+              <Link href="/help-center" className="block hover:text-[#f9f8ff] transition-colors">Help Center</Link>
+              <Link href="/contact-us" className="block hover:text-[#f9f8ff] transition-colors">Contact Us</Link>
+              <Link href="/community" className="block hover:text-[#f9f8ff] transition-colors">Community</Link>
+              <Link href="/device-support" className="block hover:text-[#f9f8ff] transition-colors">Device Support</Link>
+              <Link href="/accessibility" className="block hover:text-[#f9f8ff] transition-colors">Accessibility</Link>
             </div>
           </div>
           
           <div>
             <div className="font-semibold text-[#f9f8ff] mb-2 md:mb-3">Watch Free</div>
             <div className="space-y-1 xs:space-y-1.5">
-              <div>Live TV</div>
-              <div>Movies</div>
-              <div>TV Shows</div>
-              <div>News</div>
-              <div>Sports</div>
-              <div>Kids</div>
+              <Link href="/live-tv" className="block hover:text-[#f9f8ff] transition-colors">Live TV</Link>
+              <Link href="/movies" className="block hover:text-[#f9f8ff] transition-colors">Movies</Link>
+              <Link href="/tv-shows" className="block hover:text-[#f9f8ff] transition-colors">TV Shows</Link>
+              <Link href="/news" className="block hover:text-[#f9f8ff] transition-colors">News</Link>
+              <Link href="/sports" className="block hover:text-[#f9f8ff] transition-colors">Sports</Link>
+              <Link href="/kids" className="block hover:text-[#f9f8ff] transition-colors">Kids</Link>
             </div>
           </div>
           
           <div>
             <div className="font-semibold text-[#f9f8ff] mb-2 md:mb-3">Legal</div>
             <div className="space-y-1 xs:space-y-1.5">
-              <div>Terms of Service</div>
-              <div>Privacy Policy</div>
-              <div>Cookie Policy</div>
-              <div>DMCA</div>
-              <div>Content Guidelines</div>
+              <Link href="/terms-of-service" className="block hover:text-[#f9f8ff] transition-colors">Terms of Service</Link>
+              <Link href="/privacy-policy" className="block hover:text-[#f9f8ff] transition-colors">Privacy Policy</Link>
+              <Link href="/cookie-policy" className="block hover:text-[#f9f8ff] transition-colors">Cookie Policy</Link>
+              <Link href="/dmca" className="block hover:text-[#f9f8ff] transition-colors">DMCA</Link>
+              <Link href="/content-guidelines" className="block hover:text-[#f9f8ff] transition-colors">Content Guidelines</Link>
             </div>
           </div>
           
@@ -105,11 +106,11 @@ export default function Footer() {
             <div className="space-y-2 xs:space-y-3">
               <div className="flex items-center gap-1.5">
                 <EnvelopeIcon className="h-4 w-4" />
-                <span>support@servia.com</span>
+                <span>support@pixloris.com</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <PhoneIcon className="h-4 w-4" />
-                <span>1-800-SERVIA</span>
+                <span>1-800-PXLRIS</span>
               </div>
               
               <div className="flex gap-3 mt-2 pt-2 border-t border-[#232a31]">
@@ -132,7 +133,7 @@ export default function Footer() {
         
         {/* Copyright and bottom links */}
         <div className="mt-8 pt-6 border-t border-[#232a31] flex flex-col xs:flex-row justify-between items-center gap-4 text-[10px] xs:text-xs">
-          <div>© 2025 Servia, Inc. All rights reserved.</div>
+          <div>© 2025 Pixloris, Inc. All rights reserved. Owned by Hasib Ahmed. <a href="https://www.pixloris.com" className="hover:text-[#f9f8ff] underline">www.Pixloris.com</a></div>
           <div className="flex gap-3 xs:gap-4 sm:gap-6 flex-wrap justify-center">
             <a href="#" className="hover:text-[#f9f8ff]">Sitemap</a>
             <a href="#" className="hover:text-[#f9f8ff]">Cookies</a>

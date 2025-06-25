@@ -41,7 +41,7 @@ export default function Header({ toggleSidebar = () => {} }: HeaderProps) {
         <div className="flex items-center gap-1.5 xs:gap-2 bg-[#181e23] px-2 xs:px-3 py-1.5 xs:py-2 rounded-lg">
           <UserCircleIcon className="h-6 w-6 xs:h-7 xs:w-7 text-[#f9f8ff]" />
           <div className="flex flex-col leading-tight">
-            <span className="text-xs xs:text-sm font-semibold">Yuki R.</span>
+            <span className="text-xs xs:text-sm font-semibold">Hasib Ahmed</span>
             <span className="text-[10px] xs:text-xs text-yellow-400 font-medium">Premium</span>
           </div>
           <ChevronDownIcon className="h-4 w-4 xs:h-5 xs:w-5 text-[#959ca3] ml-0.5 xs:ml-1" />

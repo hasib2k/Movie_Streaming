@@ -85,7 +85,7 @@ export default function Sidebar({ isOpen = false, onClose = () => {} }: SidebarP
             <rect x="12.5" y="9.5" width="2" height="2" rx="1" fill="#FFD600"/>
           </svg>
         </span>
-        <span className="text-xl sm:text-2xl font-bold tracking-wide">servia</span>
+        <span className="text-xl sm:text-2xl font-bold tracking-wide">pixloris</span>
       </div>
       {/* Navigation */}
       <nav className="flex flex-col gap-1 sm:gap-2">

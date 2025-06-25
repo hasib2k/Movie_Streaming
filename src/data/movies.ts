@@ -22,6 +22,13 @@ const movies = [
     category: "Action",
   },
   {
+    title: "The Electric State (2025)",
+    image: "/The_Electric_State.jpg",
+    year: 2025,
+    rating: 5.9,
+    category: "Action",
+  },
+  {
     title: "The Martian",
     image: "/The_Martian.webp",
     year: 2023,
@@ -86,6 +93,13 @@ const movies = [
     rating: 8.2,
     category: "Trending",
   },
+ {
+    title: "The Martian",
+    image: "/The_Martian.webp",
+    year: 2023,
+    rating: 7.8,
+    category: "Trending",
+  },
   
   // Adventure Movies
   {
@@ -123,6 +137,20 @@ const movies = [
     rating: 8.5,
     category: "Adventure",
   },
+  {
+    title: "Blade Runner 2049",
+    image: "/blade_runner.jpg",
+    year: 2024,
+    rating: 8.7,
+    category: "Adventure",
+  },
+  {
+    title: "Arcane",
+    image: "/arcane.jpg",
+    year: 2024,
+    rating: 9.0,
+    category: "Adventure",
+  },
   
   // Comedy Movies
   {
@@ -140,6 +168,20 @@ const movies = [
     category: "Comedy",
   },
   {
+    title: "The Electric State (2025)",
+    image: "/The_Electric_State.jpg",
+    year: 2025,
+    rating: 5.9,
+    category: "Comedy",
+  },
+  {
+    title: "Straume",
+    image: "/straume.jpg",
+    year: 2024,
+    rating: 7.9,
+    category: "Comedy",
+  },
+  {
     title: "Arcane",
     image: "/arcane.jpg",
     year: 2024,
@@ -151,6 +193,13 @@ const movies = [
     image: "/Mufasa.jpg",
     year: 2024,
     rating: 6.6,
+    category: "Comedy",
+  },
+  {
+    title: "Last Bullet (2025)",
+    image: "/Last_bullet.jpg",
+    year: 2025,
+    rating: 6.3,
     category: "Comedy",
   },
   
@@ -183,6 +232,27 @@ const movies = [
     rating: 8.2,
     category: "Crime",
   },
+  {
+    title: "The Electric State (2025)",
+    image: "/The_Electric_State.jpg",
+    year: 2025,
+    rating: 5.9,
+    category: "Crime",
+  },
+  {
+    title: "Lilo & Stitch",
+    image: "/lilo_stitch.jpg",
+    year: 2025,
+    rating: 7.2,
+    category: "Crime",
+  },
+  {
+    title: "Blade Runner 2049",
+    image: "/blade_runner.jpg",
+    year: 2024,
+    rating: 8.7,
+    category: "Crime",
+  },
   
   // Drama Movies
   {
@@ -207,10 +277,31 @@ const movies = [
     category: "Drama",
   },
   {
+    title: "Straume",
+    image: "/straume.jpg",
+    year: 2024,
+    rating: 7.9,
+    category: "Drama",
+  },
+  {
     title: "The Electric State (2025)",
     image: "/The_Electric_State.jpg",
     year: 2025,
     rating: 5.9,
+    category: "Drama",
+  },
+  {
+    title: "Dune: Part Two",
+    image: "/Dune_2.webp",
+    year: 2024,
+    rating: 8.5,
+    category: "Drama",
+  },
+  {
+    title: "How to Train Your Dragon",
+    image: "/how-to-train-your-dragon-dreamworks.avif",
+    year: 2024,
+    rating: 8.1,
     category: "Drama",
   },
   
